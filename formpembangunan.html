@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bangunan</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title text-center">Form Bangunan</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="namaBangunan">Nama Bangunan</label>
+                            <input type="text" class="form-control" id="namaBangunan" placeholder="Masukkan Nama Bangunan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropdown">Pilih Daya Listrik</label>
+                            <select class="form-control" id="dropdown">
+                                <option value="900">900 VA</option>
+                                <option value="1200">1200 VA</option>
+                                <option value="2200">2200 VA</option>
+                                <option value="3500">3500 VA</option>
+                                <option value="5500">5500 VA</option>
+                                <option value="6600">6600 VA</option>
+                            </select>
+                        </div>
+                        <div class="text-center"> <!-- Membuat tombol tengah -->
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
