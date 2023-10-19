@@ -22,6 +22,7 @@ showPopupBtn.addEventListener("click", () => {
 // Hide login popup
 hidePopupBtn.addEventListener("click", () => showPopupBtn.click());
 
+showPopupBtn.click();
 // Show or hide signup form
 signupLoginLink.forEach(link => {
     link.addEventListener("click", (e) => {
