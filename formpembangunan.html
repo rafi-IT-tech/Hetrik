@@ -17,7 +17,7 @@
                     <h5 class="card-title text-center">Form Bangunan</h5>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form id="buildingForm">
                         <div class="form-group">
                             <label for="namaBangunan">Nama Bangunan</label>
                             <input type="text" class="form-control" id="namaBangunan" placeholder="Masukkan Nama Bangunan" required>
@@ -34,7 +34,7 @@
                             </select>
                         </div>
                         <div class="text-center"> <!-- Membuat tombol tengah -->
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-primary" onclick="postData()">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -47,6 +47,37 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+function postData() {
+    const namaBangunan = document.getElementById("namaBangunan").value;
+    const dayaListrik = document.getElementById("dropdown").value;
+    const data = {
+        name: namaBangunan,
+        power: dayaListrik
+    };
+
+    fetch('https://6525650567cfb1e59ce73564.mockapi.io/building', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Data berhasil disimpan:', data);
+
+        localStorage.setItem("dayaBangunan", data.power);
+
+        window.location.href='energy_saving_calculator.html';
+        // Anda dapat menambahkan tindakan lain di sini, seperti mengarahkan pengguna ke halaman lain.
+    })
+    .catch(error => {
+        console.error('Terjadi kesalahan:', error);
+    });
+}
+</script>
 
 </body>
 </html>
