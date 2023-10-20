@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
               localStorage.setItem("passwordLogin", user.password);
 
             //   localStorage.getItem("lastname");
-            window.location.href = "landing_page.html?login=yes";
+            window.location.href = "formpembangunan.html?login=yes";
         
         }
           });
