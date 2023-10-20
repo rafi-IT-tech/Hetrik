@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bangunan</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="formpembangunan.html">BUILDING POWER</a>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto" style="margin-left: 15px;">
+            <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="feature_aboutus.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="formpembangunan.html">ELECTRICAL EQUIPMENT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="feature_article.html">ARTICLE</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="logoutButton">LOGOUT</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title text-center">Form Bangunan</h5>
+                </div>
+                <div class="card-body">
+                    <form id="buildingForm">
+                        <div class="form-group">
+                            <label for="namaBangunan">Nama Bangunan</label>
+                            <input type="text" class="form-control" id="namaBangunan" placeholder="Masukkan Nama Bangunan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropdown">Pilih Daya Listrik</label>
+                            <select class="form-control" id="dropdown">
+                                <option value="900">900 VA</option>
+                                <option value="1200">1200 VA</option>
+                                <option value="2200">2200 VA</option>
+                                <option value="3500">3500 VA</option>
+                                <option value="5500">5500 VA</option>
+                                <option value="6600">6600 VA</option>
+                            </select>
+                        </div>
+                        <div class="text-center"> <!-- Membuat tombol tengah -->
+                            <button type="button" class="btn btn-primary" onclick="postData()">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script src="formpembangunan.js" defer></script>
+<!--Footer-->
+<div class="bg-primary">
+    <div class="container mt-5">
+        <div class="footer-container row">
+            <div class="col-12 col-md-4 ms-5 mt-5 mb-5">
+                <!-- Tambahkan kelas bg-primary untuk latar belakang primary -->
+                <img src="assets/icon4.jpg" alt="" class="img-fluid w-50">
+            </div>
+            <div class="col-12 col-md-3 mt-5 text-light">
+                <div>
+                    <h4>Company</h4>
+                    <p class="mt-4">Interval Lifespace. Jl. Simprug Golf 8 No. 6, RT.2/RW.8, Grogol
+                        Sel., Kec. Kby. Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12220.</p>
+                </div>
+                <div class="mt-5">
+                    <p>Copyright 2023 | Hetrik</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mt-5 ms-5 text-light">
+                <div>
+                    <h4>Support</h4>
+                    <ul class="navbar-nav mt-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

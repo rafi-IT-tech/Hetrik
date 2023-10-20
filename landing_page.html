@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="landing_page.css">
+    <script src="script-landing-page.js"></script>
+</head>
+<body>
+    <h1>Welcome to Hetrik's </br> Electricity Calculator App!</h1>
+    <p> Manage your energy usage with our efficient tool.</br> 
+        Calculate your home appliances' power consumption accurately to save money.</br>
+        Start calculating with <span><strong>Hetrik</strong></span> now!"</p>
+
+        <main>
+            <img src="assets/banner-landingpage.jpg" alt="img-landing-page">
+
+            <header>
+                <div class="power-building">
+                    <h3>Power Building</h3>
+                    <label for="dropdown">Choose your building's power</label>
+                    <select id="dropdown">
+                        <option value="option1">900VA</option>
+                        <option value="option2">1200VA</option>
+                        <option value="option3">2200VA</option>
+                        <option value="option4">3500VA</option>
+                        <option value="option4">5500VA</option>
+                        <option value="option4">6600VA</option>
+                    </select>
+                </div>
+                <div class="electrical-equipment">
+                    <h3>Electrical Equipment</h3>
+                    <form action="#">
+                    <div class="input-device">
+                        <label>Device</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="input-power">
+                        <label>Power (watt)</label>
+                        <input type="number" name="power" id="power" required>
+                    </div>
+                    <div class="input-duration">
+                        <label>Duration (hours)</label>
+                        <input type="number" name="duration" id="duration" required>
+                    </div>
+
+                    <div class="btn-calculate">
+                        <a href="index.html">
+                        <button type="button" id="btn-calculate">Calculate</button>
+                        
+                    </a>
+                    </div>
+
+                </form>
+                </div>
+
+            </header>
+
+        </main>
+
+        
+</body>
+</html>
